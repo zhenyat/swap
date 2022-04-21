@@ -1,0 +1,6 @@
+<div class='container'>
+  <p style='color: green'><%= notice %></p>
+  <h1><%= t CoinNickname.model_name.human %></h1>
+  <%= render @coin_nickname %>
+  <%= render 'admin/shared/show_actions', object: @coin_nickname %>
+</div>

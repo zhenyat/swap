@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-ms-6">
+      <%=  simple_form_for([:admin, @pair_nickname], html: {multipart: true}) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-inputs">
+          <%= f.association :pair, include_blank: false %>
+          <%= f.input :name %>
+          <%= f.input :status, default: 0 %>
+          <%#= render 'admin/shared/status_buttons', f: f %>
+          <%= render 'admin/shared/form_images', f: f, object: @pair_nickname %>
+
+          <%= render 'admin/shared/form_actions', f: f, object: @pair_nickname %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

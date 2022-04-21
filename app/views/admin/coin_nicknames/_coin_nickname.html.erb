@@ -1,0 +1,21 @@
+<div class='container'>
+  <table class='table table-striped'>
+    <tbody>
+      <% @coin_nickname.attributes.each do |key, value| %>
+        <tr>
+          <% unless key == 'id' || key.include?('digest') || key == 'created_at' || key == 'updated_at' %>
+            <% if key == 'status' %>
+              <td><%= t 'status.status' %></td>
+              <td><%= status_mark @coin_nickname.status %></td>
+            <% else %>
+              <td><%= t "activerecord.attributes.coin_nickname.#{key}" %></td>
+              <td><%= value %></td>
+            <% end %>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= render 'admin/shared/show_rich_text_content', object: @coin_nickname %>
+  <%= render 'admin/shared/show_images', object: @coin_nickname %>
+</div>

@@ -1,0 +1,7 @@
+<div class='container'>
+  <p style='color: green'><%= notice %></p>
+  <h1><%= t Pair.model_name.human %> <%= image_tag @pair.cover_image.variant(resize_to_limit: [70, 70]) %></h1>
+
+  <%= render @pair %>
+  <%= render 'admin/shared/show_actions', object: @pair %>
+</div>

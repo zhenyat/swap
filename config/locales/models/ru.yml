@@ -1,0 +1,61 @@
+ru:
+  activerecord:
+    models:
+      user:
+        one:                    Пользователь
+        other:                  Пользователи
+      account:
+        one:                    Учетная запись
+        other:                  Учетные записи
+      coin:
+        one:                    Монета
+        other:                  Монеты
+      coin_nickname:
+        one:                    Ник монеты
+        other:                  Ники монет
+      pair:
+        one:                    Валютная пара
+        other:                  Валютные пары
+      pair_nickname:
+        one:                    Ник валютной пары
+        other:                  Ники валютных пар
+      product:
+        one:                    Товар
+        other:                  Товары
+      sample:
+        one:                    Образец
+        other:                  Образцы
+
+    attributes:
+      user:
+        role:                   Роль
+        last_name:              Фамилия
+        first_name:              Имя
+        email:                  Э/почта
+        password:               Пароль
+        password_confirmation:   Подтверждение пароля
+        status:                 Status
+      account:
+        email:                  Э/почта
+        name:                   Имя
+        nickname:               Псевдоним
+        password:               Пароль
+        password_confirmation:   Подтверждение пароля
+      category:
+        name:                   Имя в БД
+        title:                  Наименование
+        ancestry:               Предок
+        abstract:               Краткое описание
+        position:               Позиция
+        status:                 Статус
+        url:                    URL
+        seo_title:              SEO Заголовок
+        seo_description:        SEO Описание
+        seo_keywords:           SEO Ключевые слова
+      sample:
+        name:                   Имя
+        title:                  Наименование
+        description:            Описание
+        price:                  Цена
+        quantity:               Количество
+        status:                 Статус
